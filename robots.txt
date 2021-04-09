@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Host: www.dverki32.ru
+Sitemap: http://dverki32.ru/sitemap.xml

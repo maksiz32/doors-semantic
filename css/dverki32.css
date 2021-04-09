@@ -1,0 +1,258 @@
+@font-face {
+	font-family: 'RBNaftalin';
+	src: url('../lib/webfonts/362F2F_0_0.eot');
+	src: url('../lib/webfonts/362F2F_0_0.eot?#iefix') format('embedded-opentype'),
+		url('../lib/webfonts/362F2F_0_0.woff2') format('woff2'),
+		url('../lib/webfonts/362F2F_0_0.woff') format('woff'),
+		url('../lib/webfonts/362F2F_0_0.ttf') format('truetype');
+}
+  
+@font-face {
+	font-family: 'HazelnutPro-Black';
+	src: url('../lib/webfonts/362F2F_1_0.eot');
+	src: url('../lib/webfonts/362F2F_1_0.eot?#iefix') format('embedded-opentype'),
+		url('../lib/webfonts/362F2F_1_0.woff2') format('woff2'),
+		url('../lib/webfonts/362F2F_1_0.woff') format('woff'),
+		url('../lib/webfonts/362F2F_1_0.ttf') format('truetype');
+}
+ 
+@font-face {
+	font-family: 'AmerikaPro';
+	src: url('../lib/webfonts/362F2F_2_0.eot');
+	src: url('../lib/webfonts/362F2F_2_0.eot?#iefix') format('embedded-opentype'),
+		url('../lib/webfonts/362F2F_2_0.woff2') format('woff2'),
+		url('../lib/webfonts/362F2F_2_0.woff') format('woff'),
+		url('../lib/webfonts/362F2F_2_0.ttf') format('truetype');
+}
+
+body {
+	background-color: rgba(152, 230, 152, .3) !important;
+}
+
+.bz {
+	background-color: #99e699;
+}
+
+.text-white, .text-white ul, .text-white li a,
+.menu.text-white .is-active > a {
+	color: white;
+}
+
+.text-red {
+	color: red;
+}
+
+.text-yellow {
+	color: yellow;
+}
+
+.text-blue {
+	color: blue;
+}
+
+.inl-bl {
+	display: inline-block;
+	margin-left: 10px;
+}
+
+.back-gray, .back-gray ul {
+	background-color: #8c8c8c;
+	margin: 0 !important;
+}
+
+.text-logo {
+	font-family: 'HazelnutPro-Black', Bookman Old Style, Helvetica, sans-serif;
+	font-size: 3em;
+	word-wrap: break-word;
+	text-align: center;
+	padding: 10px 0 10px 0;
+	text-shadow: 2px 2px 4px 4px #fff;
+}
+
+header.big1 { /* Надпись в шапке */
+	background-image: url(../img/doors1.jpg);
+	background-position: 50% 50%;
+	background-attachment: local;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-bottom: solid 2px #d6d6c2;
+	padding: 30px 0;
+}
+
+.paddBottom {
+	padding-bottom: 30px;
+}
+
+header.big2 { /* Надпись в шапке */
+	background-image: url(../img/logo1.jpg);
+	background-position: 50% 50%;
+	background-attachment: local;
+	background-repeat: no-repeat;
+	background-size: cover;		
+}
+
+.img-logo h1 {
+	font-family: 'HazelnutPro-Black', Bookman Old Style, Helvetica, sans-serif;
+	color: #ffffff;
+	font-weight: normal;
+	/*font-size: 3em;*/
+	text-align: center;
+}
+
+#main-img h3 {
+	word-wrap: break-word;
+	padding-bottom: 30px;
+}
+
+.thumbnail {
+    border-radius: 5px !important;
+}
+
+article {
+	padding: 20px;
+	border-bottom: 1px solid gray;
+}
+
+aside {
+	padding: 20px;
+}
+
+.imgLeft {
+	float: left;
+	width: 28%;
+	padding: 0 15px 15px 0;
+}
+
+.imgRight {
+	float: right;
+	width: 28%;
+	padding: 15px 0 15px 15px;
+}
+
+/*----------TABLE---------------*/
+td, th {
+  font-size: 1.1em;
+  border: 1px solid #DDB575;
+  padding: 3px 7px 2px 7px;
+}
+th {
+  text-transform:uppercase;
+  text-align: center !important;
+  padding-top: 5px;
+  padding-bottom: 4px;
+  background: rgb(16, 162, 229);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgb(16, 162, 229)), to(rgb(7, 114, 163)));
+  background: -webkit-linear-gradient(top, rgb(16, 162, 229), rgb(7, 114, 163));
+  background: -o-linear-gradient(top, rgb(16, 162, 229), rgb(7, 114, 163));
+  background: linear-gradient(to bottom, rgb(16, 162, 229), rgb(7, 114, 163));
+  color: white;
+}
+tr:nth-of-type(even){
+  background-color: rgba(255,255,255,.1);
+}
+tr:nth-of-type(odd){
+  background-color: rgba(229, 226, 16, 0.1);
+}
+/*---------TABLE END---------------*/
+
+.widther {
+	width: 60%;
+	margin: 0 auto;
+}
+
+.imgAddr {
+	display: block;
+	width: 80%;
+	border-radius: 5px;
+	border: 5px solid #fff;
+	-webkit-box-shadow: 0 0 1px 1px #000;
+	        box-shadow: 0 0 1px 1px #000;
+	-webkit-transition-property: all;
+	-o-transition-property: all;
+	transition-property: all;
+	-webkit-transition-duration: 0.8s;
+	     -o-transition-duration: 0.8s;
+	        transition-duration: 0.8s;
+}
+
+.imgAddr:hover {
+	-webkit-transform: scale(1.4);
+	-ms-transform: scale(1.4);
+	transform: scale(1.4);
+}
+
+.paddTop {
+	padding-top: 40px;
+}
+
+div.img-footer {
+	margin: 0;
+	padding: 0;
+	height: 120px;
+	/*background-color: #00cc44;*/
+	background-image: url(../img/logo2.png);
+	background-size: 40%;
+	background-position: bottom left;
+	background-repeat: repeat-x;
+	background-origin: content-box;
+	background-clip: padding-box;
+}
+
+#footer {
+	margin: 0;
+	font-size: 10px;
+	height: 38px;
+	background-image: url(../img/footer.png);
+	background-repeat: repeat-x;
+	background-size: 50%;
+	background-position: 50% 50%;
+	padding: 1px;
+	vertical-align: middle;
+	font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; /* далее характеристики текста */
+	color: #000;
+	text-align: center;
+}
+
+.clear {	/* clearfix класс */
+  clear:both;
+}
+
+.resize180 {
+	width: 180px;
+	height: 180px;
+}
+
+.thumbnail {
+	background-position: 50% 50%;
+	-webkit-transition-property: all;
+	-o-transition-property: all;
+	transition-property: all;
+	-webkit-transition-duration: 0.5s;
+	     -o-transition-duration: 0.5s;
+	        transition-duration: 0.5s;
+}
+
+.thumbnail:hover {
+	-webkit-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	transform: scale(1.2);
+}
+
+@media (max-width: 650px) {
+header.big1 { /* Надпись в шапке */
+	background-image: none;
+	background-color: #99e699;
+}
+.text-logo {
+	font-size: 1.7em;
+	padding: 0 0 0 0;
+	text-shadow: 2px 2px 4px 4px #fff;
+	word-wrap: break-word;
+}
+#footer {
+	background-position: top left;	
+}
+#footer h4 {
+	font-size: .85em !important;
+}
+}

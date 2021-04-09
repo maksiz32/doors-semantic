@@ -1,0 +1,67 @@
+RewriteBase /
+AddDefaultCharset Off
+Options -Indexes
+<IfModule dir_module>
+    DirectoryIndex index.php
+</IfModule>
+
+ErrorDocument 401 /index.php
+ErrorDocument 403 /index.php
+ErrorDocument 404 /index.php
+ErrorDocument 500 /index.php
+
+#кэширование css, javascript и txt-файлов на неделю
+<FilesMatch ".(js|css|txt)$">
+Header set Cache-Control "max-age=604800"
+</FilesMatch>
+#кэширование flash и картинок на месяц
+<FilesMatch ".(flv|swf|ico|gif|jpg|jpeg|png)$">
+Header set Cache-Control "max-age=2592000"
+</FilesMatch>
+#запрет на кэширование скриптов
+<FilesMatch "\.(pl|php|cgi|spl|scgi|fcgi)$">
+Header unset Cache-Control
+</FilesMatch>
+
+#с dverki32.ru на www.dverki32.ru
+#RewriteEngine On
+#RewriteBase /
+#RewriteCond %{HTTP_HOST} !^www.dverki32.ru$ [NC]
+#RewriteRule ^(.*)$ http://www.dverki32.ru/$1 [L,R=301]
+
+#наоборот
+#RewriteEngine On
+#RewriteBase /
+#RewriteCond %{HTTP_HOST} !^dverki32.ru$ [NC]
+#RewriteRule ^(.*)$ http://dverki32.ru/$1 [L,R=301]
+
+#переадресация на https-соединение
+#RewriteEngine On
+#RewriteCond %{HTTPS} !on
+#RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+
+Options All -Indexes
+
+<Files .htaccess>
+order allow,deny
+deny from all
+</Files>
+
+#RewriteCond %{REQUEST_URI} ^/([A-Z][0-9]+)$
+#RewriteRule .* http://dverki32.ru/?%1 [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^.*$ $0.php [L,QSA]
+RewriteCond %{THE_REQUEST} ([^\s]*)\.php(\?[^\s]*)?
+RewriteRule (.*) %1 [R=301,L]
+
+RewriteEngine on
+RewriteBase /
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^.]+)\.html\ HTTP
+RewriteRule ^([^.]+)\.html$ http://dverki32.ru/$1 [R=301,L]
+RewriteCond %{REQUEST_URI} !(\.[^./]+)$
+RewriteCond %{REQUEST_fileNAME} !-d
+RewriteCond %{REQUEST_fileNAME} !-f
+RewriteRule (.*) /$1.html [L]
